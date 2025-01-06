@@ -1,17 +1,17 @@
 ---
-import {clsx} from "clsx";
-interface Props extends HTMLAttributes<'div'> {
+import { clsx } from "clsx";
+interface Props extends HTMLAttributes<"div"> {
   darkMode?: boolean;
-  variant?: 'glass' | 'lightGlass' | 'quartz';
+  variant?: "glass" | "lightGlass" | "quartz";
   shadow?: boolean;
   borderless?: boolean;
 }
 import "../styles/components.scss";
-import {type HTMLAttributes} from "astro/types";
+import { type HTMLAttributes } from "astro/types";
 
 const {
   darkMode = false,
-  variant = 'quartz',
+  variant = "quartz",
   shadow = true,
   borderless = false,
   ...props
@@ -19,18 +19,16 @@ const {
 ---
 
 <div
-    class={
-        clsx(
-            props.class,
-            'card',
-            darkMode && 'dark-mode',
-            variant==='glass' && 'glass',
-            variant==='lightGlass' && 'light-glass',
-            shadow || 'no-shadow',
-            borderless && 'borderless'
-        )
-    }
-    {...props}
+  class={clsx(
+    props.class,
+    "card",
+    darkMode && "dark-mode",
+    variant === "glass" && "glass",
+    variant === "lightGlass" && "light-glass",
+    shadow || "no-shadow",
+    borderless && "borderless"
+  )}
+  {...props}
 >
   <slot />
 </div>

@@ -1,17 +1,17 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import {GLOBAL_STYLE, SITE_TITLE} from '../consts';
+import HeaderLink from "./HeaderLink.astro";
+import { GLOBAL_STYLE, SITE_TITLE } from "../consts";
 import "@/styles/components.scss";
-import {clsx} from "clsx";
+import { clsx } from "clsx";
 ---
 
 <header
-    class={clsx(
-        "head-container",
-        'card',
-        GLOBAL_STYLE === 'glass' && 'glass',
-        GLOBAL_STYLE === 'lightGlass' && 'light-glass',
-    )}
+  class={clsx(
+    "head-container",
+    "card",
+    GLOBAL_STYLE === "glass" && "glass",
+    GLOBAL_STYLE === "lightGlass" && "light-glass"
+  )}
 >
   <nav>
     <h1>
@@ -22,47 +22,46 @@ import {clsx} from "clsx";
     <div class="internal-links">
       <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
-      <HeaderLink href="https://github.com/koibumi-design/astro-blog">GitHub</HeaderLink>
+      <HeaderLink href="https://github.com/neevaaa">GitHub</HeaderLink>
     </div>
   </nav>
 </header>
 
-
 <style>
-    .head-container {
-        border-radius: 0 0 0.75rem 0.75rem;
+  .head-container {
+    border-radius: 0 0 0.75rem 0.75rem;
 
-        padding: 0.75rem;
-    }
+    padding: 0.75rem;
+  }
 
-    h1 > #title {
-        font-size: 2rem;
-    }
+  h1 > #title {
+    font-size: 2rem;
+  }
 
-    #title {
-        text-decoration: none;
-    }
+  #title {
+    text-decoration: none;
+  }
 
-    #title:hover {
-        text-decoration: underline;
-    }
+  #title:hover {
+    text-decoration: underline;
+  }
 
-    nav {
-        padding: 0 0.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 90rem;
-        margin: 0 auto;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
+  nav {
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 90rem;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 
-    .internal-links {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        gap: .5rem;
-        flex-wrap: wrap;
-    }
+  .internal-links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
 </style>
